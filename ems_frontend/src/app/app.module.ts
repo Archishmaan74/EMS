@@ -3,10 +3,20 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { NorviewComponent } from './norview/norview.component';
+import { HrviewComponent } from './hrview/hrview.component';
+import { AddempComponent } from './addemp/addemp.component';
+import { EditempComponent } from './editemp/editemp.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DashboardComponent,
+    NorviewComponent,
+    HrviewComponent,
+    AddempComponent,
+    EditempComponent
   ],
   imports: [
     BrowserModule,
