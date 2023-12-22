@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { EmsService } from '../ems.service';
 
 @Component({
   selector: 'app-hrview',
@@ -6,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./hrview.component.css']
 })
 export class HrviewComponent {
-
+  emp: any = []
+  constructor(private empService : EmsService){
+    this.empService.getEmp().subscribe((data)=>{
+      this.emp = data
+    },(err)=>{
+      console.log("Cannot get employees...");
+    })
+  }
 }

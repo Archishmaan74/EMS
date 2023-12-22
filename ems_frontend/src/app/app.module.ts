@@ -9,6 +9,8 @@ import { HrviewComponent } from './hrview/hrview.component';
 import { AddempComponent } from './addemp/addemp.component';
 import { EditempComponent } from './editemp/editemp.component';
 import { ErrorpageComponent } from './errorpage/errorpage.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { ErrorpageComponent } from './errorpage/errorpage.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

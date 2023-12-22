@@ -4,6 +4,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { NorviewComponent } from './norview/norview.component';
 import { HrviewComponent } from './hrview/hrview.component';
 import { ErrorpageComponent } from './errorpage/errorpage.component';
+import { hrGuard } from './hr.guard';
 
 const routes: Routes = [
   {
@@ -13,7 +14,7 @@ const routes: Routes = [
     path: "norview", component: NorviewComponent
   },
   {
-    path: "hrview", component: HrviewComponent
+    path: "hrview", component: HrviewComponent, //canActivate: [hrGuard]
   },
   {
     path: "**", component: ErrorpageComponent
