@@ -53,13 +53,30 @@ router.post("/add",(req,res)=>{
 router.post("/edit",(req,res)=>{
     dbConnection.collection("employee").find({sno:req.body.sno}).toArray((err,data)=>{
         if(err){
-            console.log("Cannot edit...");
+            console.log("Cannot fetch data to edit...");
         }
         else{
             if(data.length > 0){
                 let {_id,...rest}=req.body
                 dbConnection.collection("employee").updateOne({sno:req.body.sno},{$set: {...rest}})
                 res.send("Edited details of employee...")
+            }
+            else{
+                console.log("Cannot edit...");
+            }
+        }
+    })
+})
+
+router.post("/delete",(req,res)=>{
+    dbConnection.collection("employee").find({sno:req.body.sno}).toArray((err,data)=>{
+        if(err){
+            console.log("Cannot delete");
+        }
+        else{
+            if(data[0] > 0){
+                dbConnection.collection("employee").deleteOne({sno:req.body.sno})
+                res.send("Employee details deleted...")
             }
         }
     })
