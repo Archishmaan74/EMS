@@ -16,7 +16,7 @@ const routes: Routes = [
     path: "norview", component: NorviewComponent
   },
   {
-    path: "hrview", component: HrviewComponent, //canActivate: [hrGuard]
+    path: "hrview", component: HrviewComponent, canActivate: [hrGuard]
   },
   {
     path: "hrview/:sno", component: EditempComponent
