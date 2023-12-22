@@ -1,1 +1,32 @@
-<p>norview works!</p>
+<div>
+    <div style="text-align: center;">
+        <h2>Guest View</h2>
+        <hr>
+    </div>
+    <div class="container-fluid" style="width: 1400px;">
+        <table class="table table-striped">
+            <thead>
+                <tr style="text-align: center;">
+                    <th>S.No.</th>
+                    <th>Emp_ID</th>
+                    <th>Name</th>
+                    <th>Username</th>
+                    <th>Adress</th>
+                    <th>Salary</th>
+                    <th>Stream</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let e of emp" style="text-align: center;">
+                    <td>{{e.sno}}</td>
+                    <td>{{e.empid}}</td>
+                    <td>{{e.name}}</td>
+                    <td>{{e.usrname}}</td>
+                    <td style="width: 200px;">{{e.address}}</td>
+                    <td>{{e.salary}}</td>
+                    <td>{{e.stream}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
