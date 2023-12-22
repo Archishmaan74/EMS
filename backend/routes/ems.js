@@ -71,13 +71,11 @@ router.post("/edit",(req,res)=>{
 router.post("/delete",(req,res)=>{
     dbConnection.collection("employee").find({sno:req.body.sno}).toArray((err,data)=>{
         if(err){
-            console.log("Cannot delete");
+            console.log("Cannot fetch to delete...");
         }
         else{
-            if(data[0] > 0){
-                dbConnection.collection("employee").deleteOne({sno:req.body.sno})
-                res.send("Employee details deleted...")
-            }
+            dbConnection.collection("employee").deleteOne({sno:req.body.sno})
+            res.send("Employee details deleted...")
         }
     })
 })
