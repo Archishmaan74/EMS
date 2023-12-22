@@ -21,4 +21,12 @@ export class EmsService {
   editEmp(emp: any){
     return this.httpClient.post("http://localhost:3000/edit",emp)
   }
+
+  addEmp(emp: any){
+    return this.httpClient.post("http://localhost:3000/add",emp)
+  }
+
+  deleteEmp(emp: any){
+    return this.httpClient.post("http://localhost:3000/delete",emp)
+  }
 }

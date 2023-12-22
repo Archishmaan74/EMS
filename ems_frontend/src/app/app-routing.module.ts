@@ -6,6 +6,7 @@ import { HrviewComponent } from './hrview/hrview.component';
 import { ErrorpageComponent } from './errorpage/errorpage.component';
 import { hrGuard } from './hr.guard';
 import { EditempComponent } from './editemp/editemp.component';
+import { AddempComponent } from './addemp/addemp.component';
 
 const routes: Routes = [
   {
@@ -19,6 +20,9 @@ const routes: Routes = [
   },
   {
     path: "hrview/:sno", component: EditempComponent
+  },
+  {
+    path: "add", component: AddempComponent
   },
   {
     path: "**", component: ErrorpageComponent

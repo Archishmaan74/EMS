@@ -15,4 +15,10 @@ export class HrviewComponent {
       console.log("Cannot get employees...");
     })
   }
+
+  delete(emp: any){
+    this.empService.deleteEmp(emp).subscribe(emp)
+    alert("Employee deleted successfully!")
+    location.reload()
+  }
 }

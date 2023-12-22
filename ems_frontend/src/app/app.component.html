@@ -8,7 +8,7 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="nav-link" aria-current="page" href="#" *ngIf="flag.url === '/hrview'">Add Employee</a>
+          <a class="nav-link" aria-current="page" [routerLink]="['/add']" *ngIf="flag.url === '/hrview'">Add Employee</a>
         </div>
       </div>
     </div>

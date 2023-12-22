@@ -1,1 +1,16 @@
-<p>addemp works!</p>
+<div>
+    <div style="text-align: center;">
+        <h2>Add Employee Details</h2>
+        <hr>
+    </div>
+    <div class="container-fluid" style="width: 500px; text-align: center; background-color: azure;"><br>
+        Sno: <input type="number" [(ngModel)]="emp.sno" required><br><br>
+        Emp_ID: <input style="margin-right: 25px;" type="number" [(ngModel)]="emp.empid" required><br><br>
+        Name: <input style="margin-right: 11px;" type="text" [(ngModel)]="emp.name" required><br><br>
+        Username: <input style="margin-right: 36px;" type="text" [(ngModel)]="emp.usrname" required><br><br>
+        Address: <input style="margin-right: 20px;" type="text" [(ngModel)]="emp.address" required><br><br>
+        Salary: <input style="margin-right: 5px;" type="number" [(ngModel)]="emp.salary" required><br><br>
+        Stream: <input style="margin-right: 12px;" type="text" [(ngModel)]="emp.stream" required><br><br>
+        <button (click)="add(emp)" [routerLink]="['/hrview']" class="btn btn-primary">Add</button><br><br>
+    </div>
+</div>
