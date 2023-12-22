@@ -13,4 +13,12 @@ export class EmsService {
   getEmp(){
     return this.httpClient.get("http://localhost:3000/display")
   }
+
+  getOneEmp(sno: number){
+    return this.httpClient.get("http://localhost:3000/dispone/"+sno)
+  }
+
+  editEmp(emp: any){
+    return this.httpClient.post("http://localhost:3000/edit",emp)
+  }
 }

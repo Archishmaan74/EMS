@@ -5,6 +5,7 @@ import { NorviewComponent } from './norview/norview.component';
 import { HrviewComponent } from './hrview/hrview.component';
 import { ErrorpageComponent } from './errorpage/errorpage.component';
 import { hrGuard } from './hr.guard';
+import { EditempComponent } from './editemp/editemp.component';
 
 const routes: Routes = [
   {
@@ -15,6 +16,9 @@ const routes: Routes = [
   },
   {
     path: "hrview", component: HrviewComponent, //canActivate: [hrGuard]
+  },
+  {
+    path: "hrview/:sno", component: EditempComponent
   },
   {
     path: "**", component: ErrorpageComponent
