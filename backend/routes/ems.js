@@ -26,6 +26,18 @@ router.get("/display",(req,res)=>{
     })
 })
 
+router.get("/dispone/:sno",(req,res)=>{
+    dbConnection.collection("employee").find({sno:parseInt(req.params.sno)}).toArray((err,data)=>{
+        if(err){
+            console.log("Cannot fetch single employee...");
+        }
+        else{
+            res.send(data[0])
+            console.log("Fetching one...");
+        }
+    })
+})
+
 router.post("/add",(req,res)=>{
     dbConnection.collection("employee").find({empid:req.body.empid}).toArray((err,data)=>{
         if(err){
@@ -34,6 +46,21 @@ router.post("/add",(req,res)=>{
         else{
             dbConnection.collection("employee").insertOne({...req.body})
             res.send("Inserted employee...")
+        }
+    })
+})
+
+router.post("/edit",(req,res)=>{
+    dbConnection.collection("employee").find({sno:req.body.sno}).toArray((err,data)=>{
+        if(err){
+            console.log("Cannot edit...");
+        }
+        else{
+            if(data.length > 0){
+                let {_id,...rest}=req.body
+                dbConnection.collection("employee").updateOne({sno:req.body.sno},{$set: {...rest}})
+                res.send("Edited details of employee...")
+            }
         }
     })
 })
