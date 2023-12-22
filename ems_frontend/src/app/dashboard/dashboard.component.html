@@ -1,13 +1,24 @@
 <div>
-    <div style="text-align: center;">
+    <div style="text-align: center; background-color: beige;">
         <h1>Employee Management System</h1>
-    </div><hr>
+        <hr>
+    </div>
     <div class="row" style="text-align: center;">
         <div class="col">
-            <button>Hr View</button>
+            <div>
+                <img style="width: 500px; margin-top: 50px; margin-bottom: 50px;" src="assets/hr.gif" alt="cannot display">
+            </div>
+            <div>
+                <button class="btn btn-outline-danger" [routerLink]="['/hrview']">Hr View</button>
+            </div>
         </div>
         <div class="col">
-            <button>Normal View</button>
+            <div>
+                <img style="width: 500px;" src="assets/empwork.gif" alt="cannot display">
+            </div>
+            <div>
+                <button class="btn btn-outline-primary" [routerLink]="['/norview']">Normal View</button>
+            </div>
         </div>
     </div>
 </div>
