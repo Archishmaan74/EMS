@@ -8,6 +8,7 @@ import { NorviewComponent } from './norview/norview.component';
 import { HrviewComponent } from './hrview/hrview.component';
 import { AddempComponent } from './addemp/addemp.component';
 import { EditempComponent } from './editemp/editemp.component';
+import { ErrorpageComponent } from './errorpage/errorpage.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { EditempComponent } from './editemp/editemp.component';
     NorviewComponent,
     HrviewComponent,
     AddempComponent,
-    EditempComponent
+    EditempComponent,
+    ErrorpageComponent
   ],
   imports: [
     BrowserModule,
