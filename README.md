@@ -1,3 +1,5 @@
+## EMS - Employee Management System
+
 This is a full stack Employee Management System made using MongoDB, Express Js, Angular and Node Js. 
 1. To use this application use **npm i** to install node modules.
 2. Open separate terminals to run backend and frontend.
