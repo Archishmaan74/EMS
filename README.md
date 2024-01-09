@@ -37,6 +37,10 @@ Database structure:- <br />
   "stream": "JAVA",
   "sno": 2
   }
+
+HR User Credentials:- <br />
+- HR Username = "Archishmaan"
+- Password = "1234"
   
   ## Screenshots
 
