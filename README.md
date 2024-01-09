@@ -42,7 +42,7 @@ HR User Credentials:- <br />
 - HR Username = "Archishmaan"
 - Password = "1234"
   
-  ## Screenshots
+## Screenshots
 
   ![ems1](https://github.com/Archishmaan74/EMS/assets/59467495/cbe3569f-a7e8-4425-bb38-538c2a649541)
   
