@@ -13,7 +13,7 @@ To test, contribute or just see what we did follow few easy steps:
 - for cross origin resource sharing use `npm i cors` in backend
 - enjoy!
 
-MEAN stack website of restaurant franchise.Properties provided:- <br />
+MEAN stack application for employee details management. Properties provided:- <br />
 - Single Page Application (used AngularJS routing)
 - Used guard for authentication
 - Database Maintaned named as EMS and collection as employee (using mongodb)
